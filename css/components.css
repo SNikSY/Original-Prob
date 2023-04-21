@@ -198,7 +198,7 @@
 /* ------------------------- Single - Vimeo Player -------------------------------------------------- */
 
 .single-vimeo-player {
-   --aspect-ratio: 56.24%;
+   --aspect-ratio: 56.25%;
 	position: relative;
 	width: 100%;
 	padding-bottom: var(--aspect-ratio);
@@ -535,10 +535,19 @@
 
 
 /* ------------------------- Thumb -------------------------------------------------- */
-
 .thumb {
    position: relative;
    width: 100%;
+   --thumb-border-radius: calc(var(--border-radius) * 0.5);
+   border-radius: var(--thumb-border-radius);
+   overflow: hidden;
+   transform: translateZ(0);
+   isolation: isolate;
+}
+.thumb2 {
+   position: relative;
+   width: 30vw;
+   height: 42.9vw;
    --thumb-border-radius: calc(var(--border-radius) * 0.5);
    border-radius: var(--thumb-border-radius);
    overflow: hidden;
@@ -635,7 +644,7 @@
 }
 
 .single-work-item .thumb {
-   margin-bottom: 1.5em;
+   margin-bottom: -5.917vw
 }
 
 .single-work-item .tags {
@@ -1108,7 +1117,7 @@ figure.single-image{
 figure.single-image .image-box {
    position: relative;
    overflow: hidden;
-   border-radius: calc(var(--border-radius) * 0.5);
+   border-radius: calc(var(--border-radius) * 1);
    width: 100%;
    transform: translateZ(0);
    isolation: isolate;
@@ -1293,15 +1302,39 @@ figure.single-image img {
    --gap: var(--gap-padding);
    --columns: 3;
 }
-
-.single-flickity-slider .flickity-carousel .flickity-slide {
+.flickity-viewport {
+   height: 42vw;
+}
+.single-flickity-slider .flickity-carousel {
    width: calc((99.999% / var(--columns)) - (var(--gap) * ((var(--columns) - 1) / var(--columns))));
    margin-right: var(--gap);
    flex-shrink: 0;
 }
-
-.single-flickity-slider .flickity-carousel .flickity-slide:last-child {
-   margin-right: 0;
+.flickity-slide{
+   margin-right: var(--gap);
+   flex-shrink: 0;
+}
+.flickity-long{
+   width: 47.5vw;
+}
+.flickity-mid{
+   width: 33.8vw;
+}
+@media screen and (max-width: 1024px){
+   .flickity-long{
+      width: 60vw;
+   }
+   .flickity-mid{
+      width: 42vw;
+   }
+   .flickity-short{
+      width: 33.8vw;
+   }
+}
+@media screen and (max-width: 540px){
+   .flickity-short{
+      width: 33.8vw;
+   }
 }
 
 .single-flickity-slider .flickity-carousel .flickity-viewport {

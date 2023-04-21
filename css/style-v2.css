@@ -549,9 +549,9 @@ nav.theme-nav-transitioning .nav-links-wrapper > * {
 /* ------------------------- Nav Logo -------------------------------------------------- */
 
 nav .nav-links .logo {
-   height: 1.5em;
+   height: 2.5em;
    position: absolute;
-   transform: translateY(-7.5%) rotate(0.001deg);
+   transform: translateY(24.5%) rotate(0.001deg);
    left: 0;
    transition: transform var(--animation-primary);
 }
@@ -568,13 +568,11 @@ nav .nav-links .logo svg {
 }
 
 nav.theme-nav-dark .logo svg path {
-   fill: var(--color-light);
    transition: fill 0.2s ease-in-out, transform var(--animation-smooth);
 }
 
 nav.theme-nav-light .logo svg path,
 nav.theme-nav-transitioning .logo svg path {
-   fill: var(--color-white);
    transition: fill 0.2s ease-in-out, transform var(--animation-smooth);
 }
 
@@ -588,39 +586,75 @@ nav .logo svg {
 }
 
 nav .logo svg:nth-child(2) {
-   transform: translateX(-12%) rotate(0.001deg);
+   transform: translateX(-58%) rotate(0.001deg);
 }
 
 nav .logo svg:nth-child(3) {
-   transform: translateX(-32%) scaleY(1.04) rotate(0.001deg);
+   transform: translateX(-161%) scaleY(1.03) rotate(0.001deg);
 }
 
 nav .logo svg:nth-child(4) {
-   transform: translateX(-39%) rotate(0.001deg);
+   transform: translateX(-222%) rotate(0.001deg);
 }
 
-nav .logo svg:is(:nth-child(2), :nth-child(3), :nth-child(4)) path {
+nav .logo svg:nth-child(5) {
+   transform: translateX(-288%) scaleY(0.97) rotate(0.001deg);
+}
+
+nav .logo svg:nth-child(6) {
+   transform: translateX(-352%) rotate(0.001deg);
+}
+
+nav .logo svg:nth-child(7) {
+   transform: translateX(-419%) scaleY(0.97) rotate(0.001deg);
+}
+
+nav .logo svg:nth-child(8) {
+   transform: translateX(-480%) rotate(0.001deg);
+}
+
+nav .logo svg:is(:nth-child(2), :nth-child(3), :nth-child(4), :nth-child(5), :nth-child(6), :nth-child(7), :nth-child(8)) path {
    transform: translateX(0%) rotate(0.001deg);
 }
 
 /* Nav Scrolled */
 
 nav.scroll-scrolled .logo svg:nth-child(2) {
-   transform: translateX(calc(-35% + 50%)) rotate(0.001deg);
+   transform: translateX(calc(-305% + 50%)) rotate(0.001deg);
    border-radius: 0.2em;
 }
 
 nav.scroll-scrolled .logo svg:nth-child(3) {
-   transform: translateX(calc(-35% + -50%)) scaleY(1.04) rotate(0.001deg);
+   transform: translateX(calc(-305% + -50%)) scaleY(1.04) rotate(0.001deg);
    border-radius: 0.2em;
 }
 
 nav.scroll-scrolled .logo svg:nth-child(4) {
-   transform: translateX(calc(-41% + -100%)) rotate(0.001deg);
+   transform: translateX(calc(-401% + -100%)) rotate(0.001deg);
    border-radius: 0.2em;
 }
 
-nav.scroll-scrolled .logo svg:is(:nth-child(2), :nth-child(3), :nth-child(4)) path {
+nav.scroll-scrolled .logo svg:nth-child(5) {
+   transform: translateX(calc(-401% + -100%)) rotate(0.001deg);
+   border-radius: 0.2em;
+}
+
+nav.scroll-scrolled .logo svg:nth-child(6) {
+   transform: translateX(calc(-401% + -100%)) rotate(0.001deg);
+   border-radius: 0.2em;
+}
+
+nav.scroll-scrolled .logo svg:nth-child(7) {
+   transform: translateX(calc(-401% + -100%)) rotate(0.001deg);
+   border-radius: 0.2em;
+}
+
+nav.scroll-scrolled .logo svg:nth-child(8) {
+   transform: translateX(calc(-401% + -100%)) rotate(0.001deg);
+   border-radius: 0.2em;
+}
+
+nav.scroll-scrolled .logo svg:is(:nth-child(2), :nth-child(3), :nth-child(4), :nth-child(5), :nth-child(6), :nth-child(7), :nth-child(8)) path {
    transform: translateX(-105%) rotate(0.001deg);
 }
 
@@ -648,7 +682,10 @@ nav.theme-nav-dark ul li.btn.btn-link .btn-original-text span {
    transition: color 0.2s ease-in-out;
 }
 
-nav.theme-nav-light ul li.btn.btn-link span,
+nav.theme-nav-light ul li.btn.btn-link span{
+   color: var(--color-dark);
+   transition: color 0.2s ease-in-out;
+}
 nav.theme-nav-transitioning ul li.btn.btn-link .btn-original-text span{
    color: var(--color-white);
    transition: color 0.2s ease-in-out;
@@ -660,7 +697,7 @@ nav.theme-nav-dark ul li.btn.btn-link .btn-duplicate-fill {
 
 nav.theme-nav-light ul li.btn.btn-link .btn-duplicate-fill,
 nav.theme-nav-transitioning ul li.btn.btn-link .btn-duplicate-fill {
-   background-color: var(--color-white);
+   background-color: var(--color-dark);
 }
 
 nav.theme-nav-light ul li.btn.btn-link .btn-duplicate-text span,
@@ -768,13 +805,18 @@ nav.theme-nav-dark .btn-contact .btn-original-fill {
    border: 1.5px solid rgba(var(--color-light-rgb), 0.3);
 }
 
-nav.theme-nav-light .btn-contact .btn-original-text span,
+nav.theme-nav-light .btn-contact .btn-original-text span{
+   color: var(--color-dark);
+   transition: color 0.2s ease-in-out;
+}
 nav.theme-nav-transitioning .btn-contact .btn-original-text span{
    color: var(--color-white);
    transition: color 0.2s ease-in-out;
 }
 
-nav.theme-nav-light .btn-contact .btn-original-fill,
+nav.theme-nav-light .btn-contact .btn-original-fill{
+   border: 1.5px solid rgba(var(--color-dark-rgb), 0.3);
+}
 nav.theme-nav-transitioning .btn-contact .btn-original-fill{
    border: 1.5px solid rgba(var(--color-light-rgb), 0.3);
 }
@@ -1682,13 +1724,14 @@ footer .logo svg {
 .grid-work ul {
    display: flex;
    flex-wrap: wrap;
-   gap: var(--section-padding-medium) var(--gap);
+   gap: var(--gap);
    --gap: calc(var(--gap-padding) * .4);
    --columns: 3;
 }
 
 .grid-work ul li {
    width: calc((99.999% / var(--columns)) - (var(--gap) * ((var(--columns) - 1) / var(--columns))));
+   height: auto
 }
 
 /* Grid Medium */
@@ -1709,7 +1752,7 @@ footer .logo svg {
 
 @media screen and (max-width: 1024px) {
    .grid-work ul {
-      --columns: 2;
+      --columns: 3;
    }
 
    .grid-work ul.medium {
@@ -1719,7 +1762,7 @@ footer .logo svg {
 
 @media screen and (max-width: 720px) {
    .grid-work ul {
-      --columns: 1;
+      --columns: 3;
    }
 
    .grid-work ul.medium {
@@ -3008,7 +3051,7 @@ main.animate-css .about-header .word-icon .animation-arrow .arrow {
    left: 0;
    bottom: 0;
    right: 0;
-   z-index: 745;
+   z-index: 1;
    background: rgba(var(--color-black-rgb), 0.8);
    opacity: 0;
    visibility: hidden;
@@ -3874,7 +3917,7 @@ main.animate-css .about-header .word-icon .animation-arrow .arrow {
    }
 
    .work-single-related a.hover .thumb {
-      border-radius: 50%;
+      border-radius: calc(var(--border-radius) * 0.5);
    }
 }
 
